@@ -1,0 +1,28 @@
+:root {
+  --max-width: 1200px;
+}
+
+// Override the header
+
+header {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+// Override the entire page layout
+cx-page-layout {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+// Override all page slot here
+cx-page-slot {
+}
+
+// Template specific styling
+.LandingPage2Template {
+  cx-page-slot {
+    &.Section1 {
+    }
+  }
+}

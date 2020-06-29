@@ -1,0 +1,38 @@
+<ng-template [cxOutletRef]="outlets.PRICE">
+  ProductPriceOutlet
+</ng-template>
+<!-- Component based outlet -->
+
+<ng-template cxOutletRef="ProductAddToCartComponent">
+  <div class="add-to-cart">
+    <ng-container
+      [cxComponentWrapper]="{
+        typeCode: 'ProductAddToCartComponent',
+        flexType: 'ProductAddToCartComponent'
+      }"
+    ></ng-container>
+    <div class="summary" *ngIf="quantity$ | async as quantity">
+      <cx-icon type="CART"></cx-icon>
+      <div class="count">{{ quantity }}</div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- page template based outlet-->
+
+<ng-template cxOutletRef="ProductDetailsPageTemplate" cxOutletPos="before">
+  <div *ngIf="hasBrand('canon'); async" class="before-pdp">
+    Promotions for Canon
+  </div>
+</ng-template>
+
+<!-- page section based outlet-->
+<ng-template cxOutletRef="footer" cxOuletPos="before" let-model>
+  {{ model }}
+</ng-template>
+
+<!-- slot position based outler -->
+<ng-template cxOutletRef="Section1" cxOutlePos="before" let-model>
+  "Section1 " poisition
+  <pre> {{ model.components$ | async | json }}</pre>
+</ng-template>
