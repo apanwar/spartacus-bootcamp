@@ -1,4 +1,3 @@
-# spartacus-bootcamp
 ## Spartacus Bootcamp examples
 
 ### Prerequisits
