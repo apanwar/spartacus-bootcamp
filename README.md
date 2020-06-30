@@ -7,7 +7,7 @@
 
 
 ### Steps to setup
-* Chewckout the code
+* Checkout the code
 * Go to setup-schematics or setup-traditional directory
 * Run `yarn start`
 
