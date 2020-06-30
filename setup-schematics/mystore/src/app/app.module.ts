@@ -13,6 +13,9 @@ import { Theme, ThemeConfig } from './configuration/theme.config';
 import { BootcampI18nModule } from './i18n/i18n.module';
 import { BootcampLayoutConfigModule } from './layout/layout.module';
 import { BootcampOutletsModule } from './outlets/outlets.module';
+import { BootcampRoutingModule } from './routing/routing.module';
+import { BootcampSeoModule } from './seo/seo.module';
+import { BootcampStaticcmsModule } from './staticcms/staticcms.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,10 +29,10 @@ import { BootcampOutletsModule } from './outlets/outlets.module';
         },
       },
       context: {
-        urlParameters: ['baseSite', 'language', 'currency'],
-        currency: ['USD', 'GBP'],
+        urlParameters: [],
+        currency: ['USD'],
         language: ['en'],
-        baseSite: ['electronics-spa', 'apparel-uk-spa'],
+        baseSite: ['electronics-spa'],
       },
       i18n: {
         resources: translations,
@@ -48,6 +51,9 @@ import { BootcampOutletsModule } from './outlets/outlets.module';
     // DatabindingModule,
     BootcampComponentsModule,
     BootcampI18nModule,
+    BootcampRoutingModule,
+    BootcampSeoModule,
+    BootcampStaticcmsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

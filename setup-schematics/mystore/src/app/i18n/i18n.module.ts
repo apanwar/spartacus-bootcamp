@@ -17,12 +17,12 @@ export function i18nMessageFactory(
 ) {
   return (): Promise<any> => {
     translation
-      .translate('customComponents.customComponentHeading', {
+      .translate('customFeature.example', {
         param1: 1,
       })
       .pipe(filter((l) => !l.startsWith('[')))
       .subscribe((l) =>
-        messageService.add('Custom label added: $l', messageType)
+        messageService.add(`Custom label added: ${l}`, messageType)
       );
     return null;
   };
@@ -36,10 +36,10 @@ export function i18nMessageFactory(
     ConfigModule.withConfig({
       i18n: {
         backend: {
-          loadPath: 'assets/i18n-assets/{{lng}}/{ns}}.json',
+          loadPath: 'assets/i18n-assets/{{lng}}/{{ns}}.json',
         },
         chunks: {
-          custom: ['customComponents'],
+          custom: ['customFeature'],
         },
       },
     }),
