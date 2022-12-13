@@ -32,7 +32,7 @@
     "@spartacus/storefront": "^2.0.1",
     "@spartacus/styles": "^2.0.1",
     "bootstrap": "^4.2.1",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "i18next": "^19.3.4",
     "i18next-xhr-backend": "^3.2.2",
     "jquery": "1.9.1 - 3",
